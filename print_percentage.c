@@ -7,7 +7,7 @@ int print_percentage(va_list all_perc)
 
 	str = va_arg(all_perc, int);
 
-	_putchar(str);
+	write(1, &all_perc, 1);
 
 	return (0);
 }

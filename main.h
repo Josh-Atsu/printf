@@ -4,7 +4,14 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
+struct format
+{
+	char *str;
+	(*f)(char *);
+};
+typedef struct format st_f;
 
 int _printf(const char *format, ...);
 int _putchar(char c);
