@@ -2,7 +2,7 @@
 
 
 
-int print_char(va_list all_str)
+int print_char(va_list all_c)
 {
 	char str;
 
