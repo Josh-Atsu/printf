@@ -2,12 +2,12 @@
 
 int _printf(const char *format, ...)
 {
-	st_f st_va =
+	st_f st_va[] =
 	{
 		{"%c", print_char},
 		{"%s", print_string},
 		{"%%", print_percentage}
-	}
+	};
 	va_list all_arg;
 	int i;
 
@@ -15,11 +15,13 @@ int _printf(const char *format, ...)
 
 	if (format != NULL)
 	{
-		for (i = 0; i < 3; i++)
+		for (i = 0; format[i] !=  '\0'; i++)
 		{
-			if (strcpm(format, st_va[i].str))
-				st_va[i].f;
+			if (strcmp(format, st_va[i].str))
+				_putchar(format[i]);
 		}
 	}
 	return (0);
 }
+
+ st_va[0]

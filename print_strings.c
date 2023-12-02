@@ -9,9 +9,9 @@ int print_string(va_list all_str)
 
 	str = va_arg(all_str, char *);
 
-	if (str == '\0')
+	if (str == NULL)
 	{
-		return (NULL);
+		return (0);
 	}
 
 	else

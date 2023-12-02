@@ -6,7 +6,7 @@ int print_char(va_list all_c)
 {
 	char str;
 
-	str = va_arg(all_str, int);
+	str = va_arg(all_c, int);
 
 	_putchar(str);
 
