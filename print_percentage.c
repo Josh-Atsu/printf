@@ -1,11 +1,12 @@
 #include "main.h"
 
 
-int print_percentage(va_list all_perc)
+int print_percentage(void)
 {
-	
+	char c = '%';
 
-	write(1, &all_perc, 1);
+
+	write(1, &c, 1);
 
 	return (0);
 }

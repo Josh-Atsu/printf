@@ -16,11 +16,11 @@ typedef struct format st_f;
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-int print_char(va_list all_c);
-int print_string(va_list all_str);
-int print_percentage(va_list all_perc);
-
-
+int print_char(char c);
+int print_string(char *str);
+int print_percentage(void);
+int print_int(const int n);
+int print_float(const double f);
 
 
 

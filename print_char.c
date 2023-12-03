@@ -2,13 +2,10 @@
 
 
 
-int print_char(va_list all_c)
+int print_char(char c)
 {
-	char str;
 
-	str = va_arg(all_c, int);
-
-	_putchar(str);
+	_putchar(c);
 
 	return (0);
 

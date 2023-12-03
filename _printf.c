@@ -2,26 +2,57 @@
 
 int _printf(const char *format, ...)
 {
-	st_f st_va[] =
-	{
-		{"%c", print_char},
-		{"%s", print_string},
-		{"%%", print_percentage}
-	};
 	va_list all_arg;
 	int i;
 
 	va_start(all_arg, format);
 
-	if (format != NULL)
+	if (format == NULL)
 	{
-		for (i = 0; format[i] !=  '\0'; i++)
-		{
-			if (strcmp(format, st_va[i].str))
-				_putchar(format[i]);
-		}
+		return (0);
 	}
-	return (0);
+	for (i = 0; format[i] !=  '\0'; i++)
+	{
+		if (format[i] == '%')
+		{
+			switch(format[i + 1])
+			{
+				case 'c':
+				{
+					print_char(va_arg(all_arg, int));
+					break;
+				}
+				case 'd':
+				{
+					print_int(va_arg(all_arg, int));
+					break;
+				}
+				case 'f':
+				{
+					print_float(va_arg(all_arg, double));
+					break;
+				}
+				case 's':
+				{
+					print_string(va_arg(all_arg, char *));
+					break;
+				}
+				case '%':
+				{
+					print_percentage();
+					break;
+				}
+				default:
+				{
+					_putchar(format[i]);
+					_putchar(format[i + 1]);
+				}
+			}
+		}
+		else
+			{
+				_putchar(format[i]);
+			}
+	}
+	return (i);
 }
-
- st_va[0]
