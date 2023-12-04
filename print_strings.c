@@ -2,12 +2,9 @@
 
 
 
-int print_string(va_list all_str)
+int print_string(char *str)
 {
-	char *str;
 	int i = 0, len;
-
-	str = va_arg(all_str, char *);
 
 	if (str == NULL)
 	{
