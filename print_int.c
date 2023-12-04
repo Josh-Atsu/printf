@@ -1,4 +1,5 @@
 #include "main.h"
+<<<<<<< HEAD
 #include <stdio.h>
 
 
@@ -53,3 +54,16 @@ int print_int(int n)
 	return (count);
 }
 
+=======
+
+int print_int(int n)
+{
+	int last;
+
+	if (n > 9)
+	{
+		putchar(last + '0');
+	}
+	return(0);
+}
+>>>>>>> 00868f67a4bc3cdd9590a63e7716b56af17844dd
