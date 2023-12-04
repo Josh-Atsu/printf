@@ -2,7 +2,7 @@
 
 int print_unsigned(unsigned int n)
 {
-	int nb, last_digit, digit, len = 1;
+	int nb = 0, last_digit, digit, len = 1;
 	int  count = 0;
 
 	last_digit = (n % 10);
@@ -13,11 +13,11 @@ int print_unsigned(unsigned int n)
 	
 		if (nb > 0)
 		{
-			while (nb / 10 != 0)
+			for (nb = n; nb / 10 != 0; count++)
 			{
 				len = len * 10;
 				nb = nb / 10;
-				count++;
+
 			}
 			nb = n;
 			while (len > 0)
