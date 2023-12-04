@@ -27,14 +27,11 @@ int _printf(const char *format, ...)
 					print_int(va_arg(all_arg, int));
 					break;
 				}
-<<<<<<< HEAD
 				case 'i':
 				{
 					print_int(va_arg(all_arg, int));
 					break;
 				}
-=======
->>>>>>> 00868f67a4bc3cdd9590a63e7716b56af17844dd
 				case 'f':
 				{
 					print_float(va_arg(all_arg, double));
