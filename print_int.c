@@ -2,6 +2,11 @@
 
 int print_int(int n)
 {
-	putchar(n + '0');
+	int last;
+
+	if (n > 9)
+	{
+		putchar(last + '0');
+	}
 	return(0);
 }
