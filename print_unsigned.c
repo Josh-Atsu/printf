@@ -1,8 +1,10 @@
 #include "main.h"
-#include <stdio.h>
-
-
-int print_int(int n)
+/**
+ * print_unsigned - prints integer
+ * @args: argument to print
+ * Return: integer
+ */
+int print_unsigned(unsigned int n)
 {
 	int nb, last_digit, digit, len = 1;
 	int  count = 0;
@@ -51,4 +53,3 @@ int print_int(int n)
 
 	return (count);
 }
-

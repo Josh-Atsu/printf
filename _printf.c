@@ -47,6 +47,11 @@ int _printf(const char *format, ...)
 					print_percentage();
 					break;
 				}
+				case 'u':
+				{
+					print_unsigned(va_arg(all_arg, unsigned int));
+					break;
+				}
 				default:
 				{
 					/*_putchar(format[i]);*/

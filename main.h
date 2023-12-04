@@ -21,6 +21,8 @@ int print_string(char *str);
 int print_percentage(void);
 int print_int(int i);
 int print_float(const double f);
+int print_unsigned(unsigned int n);
+
 
 
 
