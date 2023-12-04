@@ -26,19 +26,20 @@ int print_int(int n)
 		}
 		if (nb > 0)
 		{
-			for (nb = nb / 10; nb / 10 != 0; count++)
+			while (nb / 10 != 0)
 			{
 				len = len * 10;
 				nb = nb / 10;
+				count++;
 			}
 			nb = n;
-			for (len = 1; len > 0; count++)
+			while (len > 0)
 			{
 				digit = nb / len;
 				_putchar(digit + '0');
 				nb = nb - (digit * len);
 				len = len / 10;
-
+				count++;
 			}
 		}
 		_putchar(last_digit + '0');
