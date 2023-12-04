@@ -21,6 +21,12 @@ int print_string(char *str);
 int print_percentage(void);
 int print_int(int n);
 int print_float(const double f);
+int print_bin(int n);
+int print_unsigned(unsigned int n);
+int print_hex(int n);
+int print_HEX(int n);
+int print_oct(int n);
+
 
 
 

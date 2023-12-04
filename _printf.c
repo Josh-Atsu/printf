@@ -3,7 +3,7 @@
 int _printf(const char *format, ...)
 {
 	va_list all_arg;
-	int i;
+	int i, count = 0;
 
 	va_start(all_arg, format);
 
@@ -47,16 +47,38 @@ int _printf(const char *format, ...)
 					print_percentage();
 					break;
 				}
+				case 'u':
+				{
+					print_unsigned(va_arg(all_arg, unsigned int));
+					break;
+				}
+				case 'x':
+				{
+					print_hex(va_arg(all_arg, int));
+					break;
+				}
+				case 'X':
+				{
+					print_hex(va_arg(all_arg, int));
+					break;
+				}
+				case 'o':
+				{
+					print_oct(va_arg(all_arg, int));
+					break;
+				}
 				default:
 				{
 					/*_putchar(format[i]);*/
 					break;
 				}
+
 			}
+			count++;
 		}
 		else
 			{
-				_putchar(format[i]);
+				_putchar(format[i + count]);
 			}
 	}
 	return (i);
