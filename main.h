@@ -24,6 +24,8 @@ int print_float(const double f);
 int print_bin(int n);
 int print_unsigned(unsigned int n);
 int print_hex(int n);
+int print_HEX(int n);
+int print_oct(int n);
 
 
 
