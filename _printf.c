@@ -27,6 +27,11 @@ int _printf(const char *format, ...)
 					print_int(va_arg(all_arg, int));
 					break;
 				}
+				case 'i':
+				{
+					print_int(va_arg(all_arg, int));
+					break;
+				}
 				case 'f':
 				{
 					print_float(va_arg(all_arg, double));

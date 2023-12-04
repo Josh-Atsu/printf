@@ -19,7 +19,7 @@ int _putchar(char c);
 int print_char(char c);
 int print_string(char *str);
 int print_percentage(void);
-int print_int(const int n);
+int print_int(int n);
 int print_float(const double f);
 
 
