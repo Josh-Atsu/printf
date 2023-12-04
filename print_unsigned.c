@@ -32,5 +32,5 @@ int print_unsigned(unsigned int n)
 		_putchar(last_digit + '0');
 
 
-	return (count);
+	return (0);
 }

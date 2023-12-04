@@ -52,6 +52,16 @@ int _printf(const char *format, ...)
 					print_unsigned(va_arg(all_arg, unsigned int));
 					break;
 				}
+				case 'x':
+				{
+					print_hex(va_arg(all_arg, int));
+					break;
+				}
+				case 'X':
+				{
+					print_hex(va_arg(all_arg, int));
+					break;
+				}
 				default:
 				{
 					/*_putchar(format[i]);*/

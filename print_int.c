@@ -50,6 +50,6 @@ int print_int(int n)
 	return (1);
 	}
 
-	return (count);
+	return (0);
 }
 
