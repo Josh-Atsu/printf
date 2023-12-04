@@ -1,7 +1,7 @@
 #include "main.h"
 
-int print_int(const int n)
+int print_int(int n)
 {
-	_putchar(n + '0');
-	return(write(1, &n, 4));
+	putchar(n + '0');
+	return(0);
 }

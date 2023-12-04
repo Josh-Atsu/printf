@@ -44,8 +44,8 @@ int _printf(const char *format, ...)
 				}
 				default:
 				{
-					_putchar(format[i]);
-					_putchar(format[i + 1]);
+					/*_putchar(format[i]);*/
+					break;
 				}
 			}
 		}
