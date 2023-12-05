@@ -2,15 +2,12 @@
 
 int _printf(const char *format, ...)
 {
-	va_list all_arg;
+	
 	int i, count = 0;
-
-	va_start(all_arg, format);
+	
 
 	if (format == NULL)
-	{
 		return (0);
-	}
 	for (i = 0; format[i] !=  '\0'; i++)
 	{
 		if (format[i] == '%')
@@ -78,13 +75,12 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
-			--i;
+			--i
 			count++;
 		}
 		else
-			{
-				_putchar(format[i + count]);
-			}
+			_putchar(format[i + count]);
 	}
+	
 	return (i);
 }

@@ -1,5 +1,10 @@
 #include "main.h"
 #include <stdio.h>
+/**
+ * print_int - function to print interger
+ * @n: the int to print
+ * Return: 0
+*/
 
 
 int print_int(int n)
@@ -22,16 +27,17 @@ int print_int(int n)
 			n = -n;
 			last_digit = -last_digit;
 			count++;
-
+		
 		}
 		if (nb > 0)
 		{
-			while (nb / 10 != 0)
+			for (nb = n; nb / 10 != 0; count++)
 			{
 				len = len * 10;
 				nb = nb / 10;
-				count++;
+
 			}
+			nb = n;
 			while (len > 0)
 			{
 				digit = nb / len;
@@ -45,10 +51,10 @@ int print_int(int n)
 	}
 	else
 	{
-		_putchar('0');
-		return (1);
+	_putchar('0');
+	return (1);
 	}
 
-	return (count);
+	return (0);
 }
 

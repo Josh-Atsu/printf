@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * print_unsigned - function to print unsigned int
+ * @n: the unsigned int to print
+ * Return: 0
+*/
 
 int print_unsigned(unsigned int n)
 {
@@ -10,7 +15,6 @@ int print_unsigned(unsigned int n)
 	n = n / 10;
 	nb = n;
 
-	
 		if (nb > 0)
 		{
 			for (nb = n; nb / 10 != 0; count++)
