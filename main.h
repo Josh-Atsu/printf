@@ -14,7 +14,7 @@
  */
 struct format
 {
-	char *str;
+	char str;
 	int (*f)();
 };
 
