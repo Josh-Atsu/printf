@@ -3,17 +3,16 @@
 int _printf(const char *format, ...)
 {
 	va_list all_arg;
-	int i, count = 0, len;
+	int i, count = 0;
 	va_start(all_arg, format);
 
 	if (format == NULL)
 		return (0);
-	len = strlen(format);
-	for (i = 0; i < len; i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
-			switch (format[++i])
+			switch (format[i + 1])
 			{
 				case 'c':
 					print_char(va_arg(all_arg, int));
@@ -53,12 +52,12 @@ int _printf(const char *format, ...)
 					_putchar(format[i + 1]);
 					break;
 			}
-			--i;
-			count++;
+			i++;
 		}
 		else
-			_putchar(format[i + count]);
+			_putchar(format[i]);
+		count += 1;
 	}
 	va_end(all_arg);
-	return (i);
+	return (count);
 }
