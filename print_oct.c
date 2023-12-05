@@ -28,7 +28,8 @@ int print_oct(int n)
 	{
 		nb_oct[i] = initial_n % 8;
 		initial_n /= 8;
-		i++;
+		i
+		++;
 	}
 	i = count - 1;
 
