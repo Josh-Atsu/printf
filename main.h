@@ -33,7 +33,7 @@ int print_hex(int n);
 int print_HEX(int n);
 int print_oct(int n);
 int print_pointer(unsigned int *n);
-int switch_statement(const char *format, ...);
+
 
 
 
