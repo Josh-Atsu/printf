@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			switch(format[i + 1])
+			switch(format[++i])
 			{
 				case 'c':
 				{
@@ -67,13 +67,18 @@ int _printf(const char *format, ...)
 					print_oct(va_arg(all_arg, int));
 					break;
 				}
-				default:
+				case 'p':
 				{
-					/*_putchar(format[i]);*/
 					break;
 				}
-
+				default:
+				{	
+					_putchar(format[i - 1]);
+					_putchar(format[i]);
+					break;
+				}
 			}
+			--i;
 			count++;
 		}
 		else

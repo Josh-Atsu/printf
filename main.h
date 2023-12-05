@@ -26,6 +26,7 @@ int print_unsigned(unsigned int n);
 int print_hex(int n);
 int print_HEX(int n);
 int print_oct(int n);
+int print_pointer(va_list ptr);
 
 
 
