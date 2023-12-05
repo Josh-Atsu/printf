@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * print_oct - function to print octodecimals
+ * @n: the oct to print
+ * Return: 0
+*/
 
 
 
@@ -34,7 +39,7 @@ int print_oct(int n)
 		i--;
 	}
 	free(nb_oct);
-	
+
 	return (0);
 }
 

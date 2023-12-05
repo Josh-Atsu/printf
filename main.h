@@ -7,11 +7,17 @@
 #include <string.h>
 #include <unistd.h>
 
+/**
+ * struct format - structure
+ * @str: the type of the pointer
+ * @f: the function
+ */
 struct format
 {
 	char *str;
 	int (*f)();
 };
+
 typedef struct format st_f;
 
 int _printf(const char *format, ...);
@@ -26,6 +32,8 @@ int print_unsigned(unsigned int n);
 int print_hex(int n);
 int print_HEX(int n);
 int print_oct(int n);
+int print_pointer(unsigned int *n);
+int switch_statement(const char *format, ...);
 
 
 

@@ -1,5 +1,10 @@
 #include "main.h"
 #include <stdio.h>
+/**
+ * print_int - function to print interger
+ * @n: the int to print
+ * Return: 0
+*/
 
 
 int print_int(int n)

@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * print_hex - function to print a char
+ * @n: the char to print
+ * Return: 0
+*/
 
 
 
